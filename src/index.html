@@ -1,13 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MP1</title>
-    </head>
-    <body>
-        <h1>Hello World! Welcome to MP1!</h1>
-        <img src="assets/image.jpg">
-    </body>
+  <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+      <title>MP1</title>
+  </head>
+  <header>
+    <div class="header-main">
+      <div class="header-left">
+        <p>Charlie Du</p>
+        <i class="fa-solid fa-camera"></i>
+      </div>
+      <div class="header-right">
+        <nav class="nav-bar">
+          <ul>
+            <li class="nav-link"><a href="#Home">Home</a></li>
+            <li class="nav-link"><a href="#About">About</a></li>
+            <li class="nav-link"><a href="#Photos">Photos</a></li>
+            <li class="nav-link"><a href="#Contact">Contact</a></li>
+          </ul>
+        </nav>
+
+      </div>
+    </div>
+  </header>
+
+  <body>
+    <div class="header-space"></div>
+    <div class="home" id="Home">
+      <h1>Photography:</h1>
+      <h2 class="fly-in">A moment eternal</h2>
+    </div>
+    <div class="about"">
+      <h1 id="About">About</h1>
+      <div class="tri-split">
+        <div class="tri-content">
+          <p>I'm Charlie, an aspiring photographer</p>
+        </div>
+        <div class="tri-content">
+          <video autoplay muted loop>
+            <source src="./assets/8970224-uhd_2160_3840_25fps.mp4" type="video/mp4">
+          </video>
+          <a href="https://www.pexels.com/video/a-man-taking-pictures-while-standing-on-a-cliff-8970224"/>Video by Pavel Danilyuk from Pexels</a>
+        </div>
+        <div class="tri-content">
+          <p>Look around and see if there's anything you like</p>
+        </div>
+      </div>
+    </div>
+    <div class="photos">
+      <h1 id="Photos">Photos</h1>
+      <div class="caurosel">
+        <button type="button" id="left-nav" class="left-nav">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <ul id="image-c">
+          <li>
+            <img src="./assets/DSCF5549.JPG"/>
+          </li>
+          <li>
+            <img src="./assets/DSCF5562.JPG"/>
+          </li>
+          <li>
+            <img src="./assets/DSCF5570.JPG"/>
+          </li>
+          <li>
+            <img src="./assets/DSCF5587.JPG"/>
+          </li>
+          <li>
+            <img src="./assets/DSCF5679.JPG"/>
+          </li>
+          <li>
+            <img src="./assets/DSCF5786.JPG"/>
+          </li>
+        </ul>
+        <button type="button" id="right-nav" class="right-nav">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+
+  </body>
+
+  <Footer>
+    <div class="contact">
+      <h1 id="Contact">Contact</h1>
+      <button id="openModal">
+        <i class="fa-brands fa-github"></i>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-discord"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-x-twitter"></i>
+      </button>
+      <dialog id="modal">
+        <div class="modal">
+          <div class="modal-header">
+            <h2>Contact Me</h2>
+            <button id="closeModal">
+              <i class="fa-solid fa-x"></i>
+            </button>
+          </div>
+          <p>I don't have any social media sorry. Email me at charlie7@illinois.edu</p>
+        </div>
+      </dialog>
+    </div>
+  </Footer>
 </html>

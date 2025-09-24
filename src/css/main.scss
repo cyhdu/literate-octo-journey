@@ -1,1 +1,290 @@
 /* Your SCSS here. */
+//$header-height: 60px;
+//
+//
+//
+
+
+@keyframes fly-in {
+  0%   {transform: translate(100vw, -50%);}
+  100%   {transform: translate(10vw, -50%);}
+}
+
+html {
+  --header-height: 60px;
+  --header-font: 30px;
+  scroll-behavior: smooth;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('../assets/DSCF5797.JPG');
+  background-size: cover;
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
+h1 {
+  scroll-margin-top: var(--header-height);
+}
+
+header {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: var(--header-height);
+  background-color: #494d54;
+  color: #fafafa;
+  z-index: 10;
+}
+
+.header-space {
+  height: var(--header-height);
+  width: 100%;
+}
+
+.header-main {
+  width: 100%;
+  height: var(--header-height);
+  display: flex;
+}
+
+.header-text {
+  color: white;
+}
+
+.header-left {
+  display: flex;
+  height: var(--header-height);
+  margin-left: 2rem;
+  gap: 1rem;
+  
+  p {
+    align-self: bottom;
+    vertical-align: bottom;
+    font-size: var(--header-font);
+    height: var(--header-font);
+    margin: auto;
+  }
+  
+  i {
+    align-self: center;
+    height: var(--header-font);
+    width: var(--header-font);
+    font-size: var(--header-font);
+  }
+}
+
+.header-right {
+  height: var(--header-height);
+  flex: 1 1 auto;
+
+  a {
+    text-decoration: none;
+    color: #fafafa;
+  }
+}
+
+.nav-bar {
+  font-size: var(--header-font);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-bar ul {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+  height: var(--header-height);
+  margin: 0 2em 0 0 ;
+}
+
+.nav-bar ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-bar.nav-link.active {
+  text-decoration: underline;
+}
+
+.home {
+  height: 100vh;
+  padding: 2rem;
+}
+
+.home h1 {
+  position: absolute;
+  top: 41vh;
+  left: 15vw;
+  z-index: 1;
+}
+
+.home .fly-in {
+  position: absolute;
+  top: 50vh;
+  left: 20vw;
+  transform: translate(0%, -50%);
+  animation-name: fly-in;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
+  z-index: 1;
+}
+
+.about {
+  height: 50vh;
+  padding: 1rem 8rem;
+  background-color: #fefefe;
+  display: flex;
+  flex-direction: column;
+}
+
+.about .tri-split {
+  flex-grow: 1;
+  min-height: 0;
+  display: flex;
+}
+
+.about .tri-content {
+  height: 100%;
+  flex-grow: 1;
+  flex-basis: 0;
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0 2rem;
+}
+
+.about a {
+  text-decoration: none;
+  text-align: center;
+  color: #fafafa;
+}
+
+.about p {
+  font-size: 40px;
+  margin: auto 0;
+}
+
+.about video {
+  height: 100%;
+  margin: 0 auto;
+}
+
+
+.photos {
+  height: 90vh;
+  padding: 1rem 8rem;
+  background-color: #cde7ca;
+  display: flex;
+  flex-direction: column;
+}
+
+.photos button {
+  background-color: transparent;
+  color: #080808;
+  height: 100%;
+  width: 4rem;
+  transition-duration: 0.4s;
+  border: none;
+}
+
+.photos button:hover {
+  background-color: #12121223;
+  color: #eeeeee;
+}
+
+.photos .left-nav {
+  left: 0px;
+  top: 0px;
+}
+
+.photos .right-nav {
+  right: 0px;
+  top: 0px;
+}
+
+.photos .caurosel {
+  display: flex;
+  width: 100%;
+  flex-grow: 1;
+  min-height: 0;
+}
+
+.photos ul {
+  width: 100%;
+  flex-grow: 1;
+  gap: 8vw;
+  margin-left: 0;
+  overflow-x: scroll;
+  display: flex;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+
+.photos ul li {
+  list-style-type: none;
+  scroll-snap-align: center;
+  padding: 10px;
+  flex: 0 0 100%;
+}
+
+.photos img {
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+  height: 100%;
+}
+
+.contact {
+  height: 30vh;
+  padding: 1rem 8rem;
+  background-color: #fefefe;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact button {
+  margin: auto;
+  display: flex;
+  gap: 0.5rem;
+  border: none;
+  background-color: #fefefe;
+  transition-duration: 0.4s;
+}
+
+.contact button:hover {
+  background-color: #bebebe;
+}
+
+.contact button i {
+  font-size: 2em;
+  margin: 0.25em 0.5em;
+}
+
+dialog .modal{
+  display: flex;
+  flex-direction: column;
+  border: none;
+}
+
+dialog .modal-header {
+  display: flex;
+}
+
+dialog .modal-header h2 {
+  flex-grow: 1;
+}
+
+dialog .modal-header button {
+  align-self: flex-end;
+}
+
+::backdrop {
+  background-color: #131313;
+  opacity: 0.4;
+}
